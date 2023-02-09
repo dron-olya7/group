@@ -1,0 +1,104 @@
+@font-face {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-weight: 300;
+    /* Браузер сначала попробует найти шрифт локально */
+    src: local("Gilroy"),
+         /* Если не получилось, загрузит woff */
+         url("/fonts/Gilroy/Gilroy-Regular.woff") format("woff"),
+         /* Если браузер не поддерживает woff, загрузит ttf */
+         url("/fonts/Gilroy/Gilroy-Regular.ttf") format("ttf"),
+         url("/fonts/Gilroy/Gilroy-Regular.eot") format("eot");
+}
+
+@font-face {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-weight: 400;
+    /* Браузер сначала попробует найти шрифт локально */
+    src: local("Gilroy"),
+         /* Если не получилось, загрузит woff */
+         url("/fonts/Gilroy/Gilroy-Regular.woff") format("woff"),
+         /* Если браузер не поддерживает woff, загрузит ttf */
+         url("/fonts/Gilroy/Gilroy-Regular.ttf") format("ttf"),
+         url("/fonts/Gilroy/Gilroy-Regular.eot") format("eot");
+}
+
+@font-face {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-weight: 500;
+    /* Браузер сначала попробует найти шрифт локально */
+    src: local("Gilroy"),
+         /* Если не получилось, загрузит woff */
+         url("/fonts/Gilroy/Gilroy-Medium.woff") format("woff"),
+         /* Если браузер не поддерживает woff, загрузит ttf */
+         url("/fonts/Gilroy/Gilroy-Medium.ttf") format("ttf"),
+         url("/fonts/Gilroy/Gilroy-Medium.eot") format("eot");
+}
+
+@font-face {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-weight: 600;
+    /* Браузер сначала попробует найти шрифт локально */
+    src: local("Gilroy"),
+         /* Если не получилось, загрузит woff */
+         url("/fonts/Gilroy/Gilroy-SemiBold.eot") format("woff"),
+         /* Если браузер не поддерживает woff, загрузит ttf */
+         url("/fonts/Gilroy/Gilroy-SemiBold.eot.ttf") format("ttf"),
+         url("/fonts/Gilroy/Gilroy-SemiBold.eot.eot") format("eot");
+}
+
+@font-face {
+    font-family: "CenturyGothic";
+    font-style: normal;
+    font-weight: 400;
+    /* Браузер сначала попробует найти шрифт локально */
+    src: local("CenturyGothic"),
+         /* Если не получилось, загрузит woff */
+         url("/fonts/CenturyGothic/CenturyGothic.woff") format("woff"),
+         /* Если браузер не поддерживает woff, загрузит ttf */
+         url("/fonts/CenturyGothic/CenturyGothic.ttf") format("ttf"),
+         url("/fonts//CenturyGothic/CenturyGothic.eot") format("eot");
+}
+
+@font-face {
+    font-family: "CenturyGothic";
+    font-style: normal;
+    font-weight: 500;
+    /* Браузер сначала попробует найти шрифт локально */
+    src: local("CenturyGothic"),
+         /* Если не получилось, загрузит woff */
+         url("/fonts/CenturyGothic/CenturyGothic.woff") format("woff"),
+         /* Если браузер не поддерживает woff, загрузит ttf */
+         url("/fonts/CenturyGothic/CenturyGothic.ttf") format("ttf"),
+         url("/fonts//CenturyGothic/CenturyGothic.eot") format("eot");
+}
+
+@font-face {
+    font-family: "CenturyGothic";
+    font-style: normal;
+    font-weight: 600;
+    /* Браузер сначала попробует найти шрифт локально */
+    src: local("CenturyGothic"),
+         /* Если не получилось, загрузит woff */
+         url("/fonts/CenturyGothic/CenturyGothic.woff") format("woff"),
+         /* Если браузер не поддерживает woff, загрузит ttf */
+         url("/fonts/CenturyGothic/CenturyGothic.ttf") format("ttf"),
+         url("/fonts//CenturyGothic/CenturyGothic.eot") format("eot");
+}
+
+
+@font-face {
+    font-family: "FARRAY";
+    font-style: normal;
+    font-weight: 600;
+    /* Браузер сначала попробует найти шрифт локально */
+    src: local("FARRAY"),
+         /* Если не получилось, загрузит woff */
+         url("/fonts/FARRAY/FARRAY-Regular.woff") format("woff"),
+         /* Если браузер не поддерживает woff, загрузит ttf */
+         url("/fonts/FARRAY/FARRAY-Regular.ttf") format("ttf"),
+         url("/fonts/FARRAY/FARRAY-Regular.eot") format("eot");
+}
