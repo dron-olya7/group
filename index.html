@@ -1,323 +1,493 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>KNIGHTS OF DEATH</title>
-    <link rel="icon" href="img/logo.jpeg" type="icon">.
-    <link rel="stylesheet" href="css/fonts.css">
-    <!-- <link rel="stylesheet" href="sass/media.css"> -->
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css">
-</head>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"
+    />
+    <link rel="icon" href="img/logo.jpeg" type="icon" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
 
-<body>
-    <header class="header">   
-        <div class="header-container">
-                <img src="img/logo.jpeg" alt="logo">              
-        </div>       
-             <div class="menu-btn">
-                <span></span>
-                <span></span>
-                <span></span>
-             </div>
+  <body>
+    <header class="header" id="header">
+      <div class="header-container">
+        <a href="#" class="logo">
+          <img src="img/logo.jpeg" alt="logo" />
+        </a>
+
+        <ul class="header-nav">
+          <li><a href="#our-group" class="header-a">О группе</a></li>
+          <li><a href="#direction" class="header-a">Направления</a></li>
+          <li><a href="#search" class="header-a">Контакты</a></li>
+        </ul>
+
+        <a class="phone-header" href="tel:+78003335555">
+          <img
+            src="https://img.icons8.com/ios-filled/50/FFFFFF/phone.png"
+            width="19px"
+            class="number-phone"
+          />
+          +7 800 333 55 55
+        </a>
+        <div class="menu-btn">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
     </header>
-    <div class="menu">
-        <nav class="header-nav">
-            <ul class="header-ul">
-                <li><a href="#our-group" class="header-a">О группе</a></li>
-                <li><a href="#direction" class="header-a">Направления</a></li>
-                <li><a href="#search" class="header-a">Контакты</a></li>
-                <a class="phone-header">
-                    <img src="https://img.icons8.com/ios-filled/50/FFFFFF/phone.png" width="19px" class="number-phone">
-                    +7 800 333 55 55
-                </a>                    
-            </ul>                
-        </nav>
-    </div> 
 
     <main>
-        <section class="main-section">
-            <div class="group" >
-                <img src="img/group.jpeg" alt="group" >
-                <p class="group-music">МУЗЫКАЛЬНАЯ РОК ГРУППА</p>
-                <h1>KNIGHTS OF DEATH</h1>
-                <p class="group-desc">Хотите послушать популярные хиты этой осени? Тогда вы попали точно по адресу!
-                    Мы предлагаем вам окунуться в новую атмосферу вместе с нами!</p>
-                <button class="button"> <a href="#" class="open-popup">Связяться с нами</a></button>    
-            </div>   
-        </section>
+      <section class="main-section">
+        <div class="group">
+          <!-- <img src="img/group.jpeg" alt="group" /> -->
+          <p class="group-music">МУЗЫКАЛЬНАЯ РОК ГРУППА</p>
+          <h1>KNIGHTS OF DEATH</h1>
+          <p class="group-desc">
+            Хотите послушать популярные хиты этой осени?
+            <b>Тогда вы попали точно по адресу!</b>
+          </p>
+          <p class="group-desc">
+            Мы предлагаем вам окунуться в новую атмосферу вместе с нами!
+          </p>
+          <button class="button button-contact">Связяться с нами</button>
+        </div>
+      </section>
 
-        <div class="popup__bg">             
-                <form action="#" id="popup__form" class="popup">
-                    <div class="form__body">
-                    <p class="application">Оставить заявку</p>
-                    <img src="img/cross.svg" class="close-popup">
-                    <label>
-                        <input type="text" name="user_name" placeholder="Имя" class="name__input _req">
-                        <div class="label__text">
-                            Ваше имя
-                        </div>
-                    </label>
-                    <label>
-                        <input type="phone" name="user_phone" placeholder="x-xxx-xxx-xx-xx" class="tel__input _req">
-                        <div class="label__text">
-                            Ваш телефон
-                        </div>
-                    </label>
-                    <label>
-                        <input type="email" name="user_email" placeholder="mail@mail.ru" class="email__input _req _email ">
-                        <div class="label__text">
-                            Ваш email
-                        </div>
-                    </label>
-                    <button type="submit" onclick="show_popap('modal')">Отправить</button>
-                    </div>
-                </form>
-        </div>       
+      <div class="popup__bg">
+        <form action="#" id="popup__form" class="popup">
+          <div class="form__body">
+            <p class="application">Оставить заявку</p>
+            <img src="img/cross.svg" class="close-popup" />
+            <label>
+              <input
+                type="text"
+                name="user_name"
+                placeholder="Имя"
+                class="name__input _req"
+              />
+              <div class="label__text">Ваше имя</div>
+            </label>
+            <label>
+              <input
+                type="phone"
+                name="user_phone"
+                placeholder="+7-xxx-xxx-xx-xx"
+                class="tel__input _req"
+              />
+              <div class="label__text">Ваш телефон</div>
+            </label>
+            <label>
+              <input
+                type="email"
+                name="user_email"
+                placeholder="mail@mail.ru"
+                class="email__input _req _email"
+              />
+              <div class="label__text">Ваш email</div>
+            </label>
+            <button type="submit" onclick="show_popap('modal')">
+              Отправить
+            </button>
+          </div>
+        </form>
+      </div>
 
-        <section class="flex-conteiner-about" id="our-group">
-            <div class="image-about">
-                <img src="img/rock.jpg" alt="">
-            </div>
-            <div class="about">
-                <h2>О НАШЕЙ ГРУППЕ</h2>
-                 <p class="about-desc">
-                   <!-- Описание компании нужно вставить сюда тем же шрифтом и тем же размером текста. 
-                    Расскажите о себе, и о том, чем вы занимаетесь, как давно вы это делаете. 
-                    Также в этом блоке вы можете написать несколько предложений о том, как начиналась работа вашей компании. 
-                    Можно еще добавить пару слов о том, какие цели вы себе поставили и чего добились. 
-                    Все это поможет в расположении клиента к вашей компании.  -->
-                
-                    Наша группа была сформирована в 2015 году. Мы выступаем в разных заведения. Исполняем как свои так и делаем каверы на известные всем песни. Поначалу наша группа долго не могла сыграться,
-                    но проведя много времени вместе у нас стало получаться все лучше и лучше. На данный момент в группе четыре человека - это вокалист, барабанщик, бас-гитара, соло-гитара и возможно именно ты присоединишься к нам?</p>
+      <section class="flex-conteiner-about" id="our-group">
+        <div class="image-about">
+          <img src="img/rock.jpg" alt="" />
+        </div>
+        <div class="about">
+          <div class="about-text">
+            <h2>О НАШЕЙ ГРУППЕ</h2>
 
-                <p class="about-des"> Мы хотели выступить на большой сцене и у нас это получилось, мы были на разогреве таких групп как Слот, Loona, Lumen. </p>
-            </div>
-        </section>
-
-        <section class="conteiner-direction" id="direction">
-            <h2>НАПРАВЛЕНИЯ</h2>
-            <p class="description-direction">В каких направлениях мы создаем наши музыкальные хиты</p> 
-            <div class="conteiner-images-direction">
-                <div class="direction-group">
-                    <img src="img/direction/directionfirst.jpg" alt="direction first">
-                    <h3 class="direction-h3">Альтернативный рок</h3>
-                    <p class="description">или альт-рок, - это категория рок-музыки, возникшая в независимом музыкальном андеграунде 1970-х годов и ставшая широко популярной в 1990-х годах. </p>
-                </div>
-                <div class="direction-group">
-                    <img src="img/direction/directionsecond.jpg" alt="direction second">
-                    <h3 class="direction-h32">Готик-рок</h3>
-                    <p class="description2">Музыкальный жанр, возникший как ответвление пост-панка на рубеже 1970-х и 1980-х годов. В начале 1980-х жанр стал отдельным направлением.</p>
-                </div>
-                <div class="direction-group"> 
-                    <img src="img/direction/directionthird.jpg" alt="direction third">
-                    <h3 class="direction-h33">Гранж</h3>
-                    <p class="description3"> это «новый чёрный» 1991 года, периода в истории поп-культуры, когда музыка изменилась раз и навсегда. </p>
-                </div>
-            </div>
-        </section>
-
-        <section class="conteiner-fan">           
-            <h2>ТЕБЕ К НАМ, ЕСЛИ </h2>
-            <p class="conteiner-fan-des">Если ты фанат рок музыки и хочешь послушать что-нибудь новое в этом направлении</p>
-            
-            <div class="conteiner-advantage">
-                <div class="advantage">
-                    <img src="img/advantage/chat.svg" alt="chat" class="img-cont-fan">
-                    <h3>Быстро отвечаем</h3>
-                    <p class="advantage-des">Мы стараемся всегда быть на связи, и не пропускаем ни одного предложения</p>
-                </div>    
-                <div class="advantage">
-                    <img src="img/advantage/map.svg" alt="map" class="img-cont-fan">
-                    <h3>Удобное расположение</h3>
-                    <p class="advantage-des">Находимся в центре города, можно добраться на любом виде транспорта</p>
-                </div>    
-                <div class="advantage">
-                    <img src="img/advantage/medal.png" alt="medal" class="img-cont-fan">
-                    <h3>Много выступаем</h3>
-                    <p class="advantage-des">Участвуем в разных тусовках, ходим на разные мероприятие связанные не только с музыкой</p>
-                </div>    
-            </div>            
-        </section>
-
-        <section class="conteiner-mission">
-            <h2>НАША МИССИЯ</h2>
-            <p class="mission-desc">
-            Своей музыкой мы хотим достучаться до сердец людей. Чтобы они задумывались не только о себе, но и о том что их окружает.    
-                    
-            На данный момент мы хотим отправится в небольшой тур по городам, так как выяснили, что у нас появляются все больше и больше фанатов.
-            Собранные деньги с тура мы хотим пожертвовать в приюты для животных. 
+            <p>
+              Наша группа была сформирована в <strong>2015 году</strong>. Мы
+              выступаем в различных заведениях, исполняя как собственные
+              композиции, так и кавер-версии известных песен.
             </p>
-            <div class="video">
-                <iframe width="950" height="550" src="https://www.youtube.com/embed/oBGdfWmZXRs?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>         
+
+            <p>
+              Поначалу нам было непросто сыграться вместе, но проведя много
+              времени в репетициях, мы достигли отличного результата и с каждым
+              разом звучание становится все лучше и лучше.
+            </p>
+
+            <p>На данный момент в группе <strong>четыре человека</strong>:</p>
+            <ul>
+              <li>
+                🎤
+                <p>Вокалист</p>
+              </li>
+              <li>
+                🥁
+                <p>Барабанщик</p>
+              </li>
+              <li>
+                🎸
+                <p>Бас-гитарист</p>
+              </li>
+              <li>
+                🎸
+                <p>Соло-гитарист</p>
+              </li>
+            </ul>
+
+            <p>И возможно, <strong>именно ты присоединишься к нам</strong>!</p>
+
+            <div class="achievements">
+              <p>
+                Нам всегда хотелось выступать на большой сцене - и
+                <strong>у нас это получилось</strong>!
+              </p>
+              <p>
+                Мы имели честь быть на разогреве у таких известных групп как:
+              </p>
+              <ul>
+                <li>🎵 <strong>Слот</strong></li>
+                <li>🎵 <strong>Loona</strong></li>
+                <li>🎵 <strong>Lumen</strong></li>
+              </ul>
             </div>
-        </section>
+          </div>
+        </div>
+      </section>
 
-        <section class="music">
-            <h2>ПРОЦЕСС СОЗДАНИЯ МУЗЫКИ</h2>
-            <p class="music-desrition">Предлагаем окунуться в мир, где создается музыка</p>
-            <div class="conteiner-music" id="conteiner-music">
-                <div class="music-first">
-                    <img src="img/the process of creating music/first.jpg" alt="">
-                    <h3>Первый этап</h3>
-                    <p class="music-first-desc">Мы начинаем либо со слов песни либо с музыки. На данной этапе идет зарисовка будущей песни.</p>
-                </div>
-                <div class="music-first">
-                    <img src="img/the process of creating music/second.jpg" alt="">
-                    <h3>Второй этап</h3>
-                    <p class="music-first-desc">Пробуем сыграть музыку и слова, редактирую полученное.</p>
-                </div>
-                <div class="music-first">
-                    <img src="img/the process of creating music/third.jpg" alt="">
-                    <h3>Третий этап</h3>
-                    <p class="music-first-desc">Делаем запись получившегося. И в итоге слушаем что получилось, если что-то не устраивает переигрываем не понравившийся кусок.</p>
-                </div>
-                <div class="music-first">
-                    <img src="img/the process of creating music/fourth.jpg" alt="">
-                    <h3>Четвертый этап</h3>
-                    <p class="music-first-desc">Делаем конечный результат песни. Добавляем местами звуки, которыз по нашему мнению не зватает.</p>
-                </div>
-                <div class="music-first">
-                    <img src="img/the process of creating music/fifth.jpg" alt="">
-                    <h3>Пятый этап</h3>
-                    <p class="music-first-desc">Добавляем песню на все площадки в интернете. Читаем коментарии под новым хитом.</p>
-                </div>
-                <div class="music-first">
-                    <img src="img/the process of creating music/sixth.jpg" alt="">
-                    <h3>Шестой этап</h3>
-                    <p class="music-first-desc">Выступаем с песней. Смотрим на реакцию зрителей.</p>
-                </div>
-            </div>            
-        </section>
+      <section class="conteiner-direction" id="direction">
+        <h2>НАПРАВЛЕНИЯ</h2>
 
-        
-        <section class="conteiner-reviews">
-            <h2>ОТЗЫВЫ СЛУШАТЕЛЕЙ</h2>
-            <p class="conteiner-reviews-desc">Что думают о музыкальных хитах наши слушатели</p>
-            <div class="conteiner-rewies-people">
-                <div id="customNav" class="owl-my-nav"></div>
-                <div class="people-rewies">
-                    
-                    <h4>Кристина</h4>
-                    <p class="people-rewies-des"> Ребята очень крутые, ходила в кафе с живым выступлением, где как раз они и выступили. Песни как-будто живые. Спасибо за вечер с отличной музыкой.</p>
-                </div>
-                <div class="people-rewies">
-                    <h4>Сергей </h4>
-                    <p class="people-rewies-des">Предложил ребятам сыграть на одном мероприятии на что они сразу согласились, приехали точно в срок. Быстро настроились и отлично провели вечер!</p>
-                </div>
-                <div class="people-rewies">
-                    <h4>Марина </h4>
-                    <p class="people-rewies-des">Ходила в ресторан с живой музыкой и в этот вечер выступала данная группа, все прошло очень круто, ребята выбрали песни под которые можно было не только петь, но и танцевать.</p>
-                </div>
+        <div class="conteiner-images-direction">
+          <div class="direction-group">
+            <h3 class="direction-h3">Альтернативный рок</h3>
+            <p class="description">
+              или альт-рок, - это категория рок-музыки, возникшая в независимом
+              музыкальном андеграунде 1970-х годов и ставшая широко популярной в
+              1990-х годах.
+            </p>
+          </div>
+          <div class="direction-group">
+            <h3 class="direction-h32">Готик-рок</h3>
+            <p class="description2">
+              Музыкальный жанр, возникший как ответвление пост-панка на рубеже
+              1970-х и 1980-х годов. В начале 1980-х жанр стал отдельным
+              направлением.
+            </p>
+          </div>
+          <div class="direction-group">
+            <h3 class="direction-h33">Гранж</h3>
+            <p class="description3">
+              это «новый чёрный» 1991 года, периода в истории поп-культуры,
+              когда музыка изменилась раз и навсегда.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="conteiner-fan">
+        <h2>ПОЧЕМУ МЫ?</h2>
+        <div class="conteiner-advantage">
+          <div class="advantage">
+            <img src="img/advantage/chat.svg" alt="chat" class="img-cont-fan" />
+            <div class="advantage-text">
+              <h3>Быстро отвечаем</h3>
+              <p class="advantage-des">Мы всегда на связи</p>
             </div>
-            <div class="send">
-                <button class="button-reviews"><a href="#" class="open-popup-rev">Написать отзыв</a></button>
-            </div>          
-        </section>
-        
-        <section>
-            <div class="modal"> 
-                <form action="#" id="modal__form" class="popup-rev">
-                    <p class="feedback">Напишите отзыв</p>
-                    <img src="img/cross.svg" class="close-popup-rev" width="15px">
-                    <label>
-                        <input type="text" name="name" placeholder="Имя">
-                        <div class="label__text">
-                            Ваше имя
-                        </div>
-                    </label>
-                    <label>
-                        <input type="imail" name="email" placeholder="mail@mail.ru">
-                        <div class="label__text">
-                            Ваш email
-                        </div>
-                    </label>
-                    <label>
-                        <label>
-                            <textarea name="message"></textarea>
-                            <div class="label__text">
-                                Ваш отзыв
-                            </div>
-                        </label>
-                    </label>
-                    <button type="submit">Отправить</button>
-                </form>
-            </div>  
-        </section>        
-
-        <section class="wait">
-            <div class="next">
-                <h2>ЧТО НАС ЖДЕТ ДАЛЬШЕ</h2>
-                <p class="next-desc">Рассказываем немного о наших дальнейших планах в рок музыке</p>
-                <p class="desc-wait-1">
-                    Мы хотим выступить на морском побережье, объехать всю страну и если получится съездить за пределы России. Хотим организовать фонд помощи бездомным животным.
-                    А также планируем в ближайшее время записать новый альбом посвященный нашей планете, чтобы многие обратили внимание на то, что наша планета умирает от такого количества мусора, загрязний воздуха и воды. 
-                    Ищем в нашу крутую команду клавишника, так что если тебе интересны направления в которых мы играем, свяжись с нами.
-                </p>
-                <p class="desc-wait">
-                </p>
+          </div>
+          <div class="advantage">
+            <img src="img/advantage/map.svg" alt="map" class="img-cont-fan" />
+            <div class="advantage-text">
+              <h3>Удобное расположение</h3>
+              <p class="advantage-des">Находимся в центре города</p>
             </div>
-        </section>
-
-        <section class="form" id="form">
-            <div class="form-record">
-                <h2>ЗАПИШИСЬ НА ЗНАКОМСТВО С НАМИ</h2>
-                <form action="" class="record">
-                    <input type="text" placeholder="Введите имя" class="input-name">
-                    <input type="text" placeholder="mail@mail.ru" class="input">
-                    <input type="text" placeholder="+7 xxx xxx xx xx" class="input">
-                    <button class="btn-record"> <a href="#" class="btn-record-a" data-modal="1">Записаться сейчас</a> </button>
-                </form>
-            </div>            
-        </section>        
-
-        <section class="search" id="search">
-            <div style="position:relative;overflow:hidden;" class="map">
-                <a href="https://yandex.ru/maps/org/muzykalny_proyekt_tvoya_gruppa/200906174627/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Музыкальный проект Твоя Группа
-                </a>
-                <a href="https://yandex.ru/maps/54/yekaterinburg/category/music_schools/184105912/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:14px;">Музыкальное образование в Екатеринбурге
-                </a>
-                <a href="https://yandex.ru/maps/54/yekaterinburg/category/music_club/780928338/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:28px;">Музыкальный клуб в Екатеринбурге
-                </a>
-                <iframe src="https://yandex.ru/map-widget/v1/-/CCUjz4VCkB" style="border:0; width:100%; height:550px;" allowfullscreen="true" style="position:relative;">
-                </iframe>
+          </div>
+          <div class="advantage">
+            <img
+              src="img/advantage/medal.png"
+              alt="medal"
+              class="img-cont-fan"
+            />
+            <div class="advantage-text">
+              <h3>Много выступаем</h3>
+              <p class="advantage-des">Участвуем в разных тусовках</p>
             </div>
-        </section>
+          </div>
+        </div>
+      </section>
+
+      <section class="conteiner-mission">
+        <h2>НАША МИССИЯ</h2>
+        <p class="mission-desc">
+          Своей музыкой мы хотим достучаться до сердец людей. Чтобы они
+          задумывались не только о себе, но и о том что их окружает. На данный
+          момент мы хотим отправится в небольшой тур по городам, так как
+          выяснили, что у нас появляются все больше и больше фанатов. Собранные
+          деньги с тура мы хотим пожертвовать в приюты для животных.
+        </p>
+        <div class="video">
+          <iframe
+            width="720"
+            height="405"
+            src="https://rutube.ru/play/embed/8bf0d5ea0f536417905f890c3a90a797/"
+            style="border: none"
+            allow="clipboard-write; autoplay"
+            webkitAllowFullScreen
+            mozallowfullscreen
+            allowfullscreen
+          ></iframe>
+        </div>
+      </section>
+
+      <section class="music">
+        <h2>ПРОЦЕСС СОЗДАНИЯ МУЗЫКИ</h2>
+        <p class="music-desrition">
+          Предлагаем окунуться в мир, где создается музыка
+        </p>
+
+        <div class="conteiner-music" id="conteiner-music">
+          <div class="music-first">
+            <img src="img/the process of creating music/first.jpg" alt="" />
+            <h3>Первый этап</h3>
+            <p class="music-first-desc">
+              Мы начинаем либо со слов песни либо с музыки. На данной этапе идет
+              зарисовка будущей песни.
+            </p>
+          </div>
+          <div class="music-first">
+            <img src="img/the process of creating music/second.jpg" alt="" />
+            <h3>Второй этап</h3>
+            <p class="music-first-desc">
+              Пробуем сыграть музыку и слова, редактирую полученное.
+            </p>
+          </div>
+          <div class="music-first">
+            <img src="img/the process of creating music/third.jpg" alt="" />
+            <h3>Третий этап</h3>
+            <p class="music-first-desc">
+              Делаем запись получившегося. И в итоге слушаем что получилось,
+              если что-то не устраивает переигрываем не понравившийся кусок.
+            </p>
+          </div>
+          <div class="music-first">
+            <img src="img/the process of creating music/fourth.jpg" alt="" />
+            <h3>Четвертый этап</h3>
+            <p class="music-first-desc">
+              Делаем конечный результат песни. Добавляем местами звуки, которыз
+              по нашему мнению не зватает.
+            </p>
+          </div>
+          <div class="music-first">
+            <img src="img/the process of creating music/fifth.jpg" alt="" />
+            <h3>Пятый этап</h3>
+            <p class="music-first-desc">
+              Добавляем песню на все площадки в интернете. Читаем коментарии под
+              новым хитом.
+            </p>
+          </div>
+          <div class="music-first">
+            <img src="img/the process of creating music/sixth.jpg" alt="" />
+            <h3>Шестой этап</h3>
+            <p class="music-first-desc">
+              Выступаем с песней. Смотрим на реакцию зрителей.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="conteiner-reviews">
+        <h2>ОТЗЫВЫ СЛУШАТЕЛЕЙ</h2>
+        <p class="conteiner-reviews-desc">
+          Что думают о музыкальных хитах наши слушатели
+        </p>
+
+        <!-- Контейнер для отзывов -->
+        <div class="conteiner-rewies-people">
+          <div class="multiple-items" id="reviews-container">
+            <!-- Отзывы будут добавляться сюда динамически -->
+            <div class="people-rewies">
+              <h4>Кристина</h4>
+              <p class="people-rewies-des">
+                Ребята очень крутые, ходила в кафе с живым выступлением, где как
+                раз они и выступили. Песни как-будто живые. Спасибо за вечер с
+                отличной музыкой.
+              </p>
+              <span class="review-date">15.12.2024</span>
+            </div>
+            <div class="people-rewies">
+              <h4>Сергей</h4>
+              <p class="people-rewies-des">
+                Предложил ребятам сыграть на одном мероприятии на что они сразу
+                согласились, приехали точно в срок. Быстро настроились и отлично
+                провели вечер!
+              </p>
+              <span class="review-date">10.12.2024</span>
+            </div>
+            <div class="people-rewies">
+              <h4>Марина</h4>
+              <p class="people-rewies-des">
+                Ходила в ресторан с живой музыкой и в этот вечер выступала
+                данная группа, все прошло очень круто, ребята выбрали песни под
+                которые можно было не только петь, но и танцевать.
+              </p>
+              <span class="review-date">05.12.2024</span>
+            </div>
+            <div class="people-rewies">
+              <h4>Кирилл</h4>
+              <p class="people-rewies-des">
+                Сходили посмотрели на ребят, вот честно не думали что так будет
+                круто-классно. Отожгли по полной! Думаю придем еще!!!
+              </p>
+              <span class="review-date">01.12.2024</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="btn">
+          <button class="button button-reviews">Написать отзыв</button>
+        </div>
+      </section>
+
+      <div class="popup-rev">
+        <div class="modal">
+          <form action="#" id="review-form" class="modal__form">
+            <p class="feedback">Напишите отзыв</p>
+            <img src="img/cross.svg" class="close-popup-rev" width="15px" />
+            <label>
+              <input
+                type="text"
+                name="name"
+                class="name__input"
+                placeholder="Имя"
+              />
+              <div class="label__text">Ваше имя</div>
+            </label>
+            <label>
+              <input
+                type="tel"
+                name="phone"
+                class="tel__input"
+                placeholder="Телефон"
+              />
+              <div class="label__text">Ваш телефон</div>
+            </label>
+            <label>
+              <input
+                type="email"
+                name="email"
+                class="email__input"
+                placeholder="mail@mail.ru"
+              />
+              <div class="label__text">Ваш email</div>
+            </label>
+            <label>
+              <textarea
+                name="message"
+                class="message__input"
+                placeholder="Ваш отзыв"
+              ></textarea>
+              <div class="label__text">Комментарий</div>
+            </label>
+            <button type="submit">Отправить</button>
+          </form>
+        </div>
+      </div>
+
+      <section class="form" id="form">
+        <div class="form-record">
+          <h2>ЗАПИШИСЬ НА ЗНАКОМСТВО С НАМИ</h2>
+          <form action="" class="record">
+            <div class="input-group">
+              <input type="text" placeholder="Введите имя" class="input-name" />
+            </div>
+            <div class="input-group">
+              <input type="text" placeholder="mail@mail.ru" class="input" />
+            </div>
+            <div class="input-group">
+              <input type="text" placeholder="+7 xxx xxx xx xx" class="input" />
+            </div>
+          </form>
+          <div class="btn">
+            <button class="button btn-record">Записаться сейчас</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="search" id="search">
+        <div style="position: relative; overflow: hidden" class="map">
+          <a
+            href="https://yandex.ru/maps/org/muzykalny_proyekt_tvoya_gruppa/200906174627/?utm_medium=mapframe&utm_source=maps"
+            style="color: #eee; font-size: 12px; position: absolute; top: 0px"
+            >Музыкальный проект Твоя Группа
+          </a>
+          <a
+            href="https://yandex.ru/maps/54/yekaterinburg/category/music_schools/184105912/?utm_medium=mapframe&utm_source=maps"
+            style="color: #eee; font-size: 12px; position: absolute; top: 14px"
+            >Музыкальное образование в Екатеринбурге
+          </a>
+          <a
+            href="https://yandex.ru/maps/54/yekaterinburg/category/music_club/780928338/?utm_medium=mapframe&utm_source=maps"
+            style="color: #eee; font-size: 12px; position: absolute; top: 28px"
+            >Музыкальный клуб в Екатеринбурге
+          </a>
+          <iframe
+            src="https://yandex.ru/map-widget/v1/-/CCUjz4VCkB"
+            style="border: 0; width: 100%; height: 550px"
+            allowfullscreen="true"
+            style="position: relative"
+          >
+          </iframe>
+        </div>
+      </section>
     </main>
 
-    <footer >
-        <div class="conteiner-footer">
-            <div class="conteiner-logo"> 
-                <img src="img/logo.jpeg" alt="" class="logo">
-                <p class="cont-logo-p">г.Екатеринбург, ул. Малышева, 85А</p>
-            </div>
-        
-            <div class="phone-footer">
-                <img src="https://img.icons8.com/ios-filled/50/FFFFFF/phone.png" width="20px" class="number-phone"> +7 800 333 55 55
-                <p>Звонок по России бесплатный</p>            
-            </div>
+    <footer>
+      <div class="conteiner-footer">
+        <div class="conteiner-logo">
+          <img src="img/logo.jpeg" alt="" class="logo" />
+          <p class="cont-logo-p">г.Екатеринбург, ул. Малышева, 85А</p>
         </div>
-        
 
-        <div class="icons-conteiner">
-            <a href="#"><img src="img/telegram.svg" alt="" class="icon"></a>
-            <a href="#"><img src="img/vk.svg" alt="" class="icon"></a>
-            <a href="#"><img src="img/whatsapp.svg" alt="" class="icon"></a>
+        <div class="phone-footer">
+          <div class="contact-foot">
+            <img
+              src="https://img.icons8.com/ios-filled/50/FFFFFF/phone.png"
+              width="20px"
+              class="number-phone"
+            />
+            +7 800 333 55 55
+          </div>
+
+          <p>Звонок по России бесплатный</p>
         </div>
+      </div>
+
+      <div class="icons-conteiner">
+        <a href="#"><img src="img/telegram.svg" alt="" class="icon" /></a>
+        <a href="#"><img src="img/vk.svg" alt="" class="icon" /></a>
+        <a href="#"><img src="img/whatsapp.svg" alt="" class="icon" /></a>
+      </div>
     </footer>
-    
-    <div class="go-top">▲</div>
 
-    
+    <div class="go-top">➜</div>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+    <script src="js/slider.js"></script>
+    <script src="js/form.js"></script>
+    <script src="/js/script.js"></script>
     <script src="/js/menu.js"></script>
-    <script src="/js/upbutton.js"></script>   
-    <script src="/js/popup.js"></script>
-    <script src="/js/reviews.js"></script> 
-    
-</body>
-
+    <script src="/js/upbutton.js"></script>
+    <script src="/js/reviews.js"></script>
+  </body>
 </html>
-
