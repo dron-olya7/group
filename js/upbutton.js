@@ -7,25 +7,24 @@ window.addEventListener("scroll", trackScroll);
 goTopBtn.addEventListener("click", goTop);
 
 function trackScroll() {
-  // вычисляем положение от верхушки страницы
   const scrolled = window.pageYOffset;
-  // считаем высоту окна браузера
-  const coords = document.documentElement.clientHeight;
-  // если вышли за пределы первого окна
-  if (scrolled > coords) {
-    // кнопка появляется
+  const pageHeight = document.documentElement.scrollHeight;
+  const windowHeight = document.documentElement.clientHeight;
+  
+  // Показывать кнопку после прокрутки 30% страницы
+  const scrollThreshold = pageHeight * 0.3;
+  
+  if (scrolled > windowHeight * 2) {
     goTopBtn.classList.add("go-top--show");
   } else {
-    // иначе исчезает
     goTopBtn.classList.remove("go-top--show");
   }
 }
 
 function goTop() {
-  // пока не вернулись в начало страницы
-  if (window.pageYOffset > 0) {
-    // скроллим наверх
-    window.scrollBy(0, -75); // второй аргумент - скорость
-    setTimeout(goTop, 0); // входим в рекурсию
-  }
+  // Используем современный плавный скролл вместо рекурсии
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
 }
